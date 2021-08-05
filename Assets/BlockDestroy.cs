@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//消えるブロック
 public class BlockDestroy : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,10 +17,10 @@ public class BlockDestroy : MonoBehaviour
     }
 
 
-
+    //何かに当たったら
     private void OnCollisionEnter(Collision collision)
     {
-
+        //このゲームオブジェクト（を削除する
         Destroy(this.gameObject);
     }
 
