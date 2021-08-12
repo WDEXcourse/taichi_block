@@ -13,6 +13,18 @@ public class BallMOVE : MonoBehaviour
         rb.AddForce(5, 0, -17, ForceMode.Impulse);
     }
 
+    void OnCollisionStay(Collision hit)
+    {
+        Debug.Log(hit.gameObject.name);
+        if (hit.gameObject.tag == "Enemy")
+        {
+            transform.position = new Vector3(-1.8f, -159f, 367.37f);
+
+        }
+      
+    }
+
+
     // Update is called once per frame
     void Update()
     {
